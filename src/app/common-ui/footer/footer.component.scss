@@ -1,0 +1,32 @@
+.footer {
+  color: white;
+  background: #444;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.footer-title {
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .sub-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+}
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  .input-group {
+    display: flex;
+  }
+  .label{
+    text-transform: uppercase;
+  }
+}

@@ -4,13 +4,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { LoginModalComponent } from './login-modal/login-modal.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    LoginModalComponent
+    LoginModalComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { LoginModalComponent } from './login-modal/login-modal.component';
   ],
   exports: [
     HeaderComponent,
-    LoginModalComponent
+    LoginModalComponent,
+    FooterComponent
   ]
 })
 export class CommonUiModule { }

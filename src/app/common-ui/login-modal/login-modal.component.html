@@ -1,6 +1,17 @@
 <div *ngIf="isModal">
   <div class="modal">
-    <h4>Login</h4>
+    <div class="title">
+      <h4>Login</h4>
+      <img
+        width="24"
+        height="24"
+        class="favorite"
+        (click)="hide()"
+        src="assets/images/close.svg"
+        alt=""
+      />
+    </div>
+
     <hr />
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, possimus.
