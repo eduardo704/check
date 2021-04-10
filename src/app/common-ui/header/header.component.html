@@ -1,15 +1,23 @@
 <nav class="menu">
   <div class="menu-content">
-    <div>LOGO</div>
+    <div class="logo-container">
+      <img class="logo" src="assets/images/logo.png" />
+      <p [routerLink]="['/']" class="link">Mobilo 24</p>
+    </div>
     <div class="middle-itens">
-      <a>Smartphones</a>
-      <a>TopSeller</a>
-      <a>Angebote</a>
-      <a>Sucher</a>
+      <p class="link">Smartphones</p>
+      <p class="link">TopSeller</p>
+      <p class="link">Angebote</p>
+      <p class="link">Sucher</p>
     </div>
     <div class="end">
-      <a>Merkzetell (0)</a>
+      <p
+        [routerLink]="['/notepad']"
+        routerLinkActive="router-link-active"
+        class="link"
+      >
+        Merkzetell ({{ count$ | async }})
+      </p>
     </div>
   </div>
-
 </nav>

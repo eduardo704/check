@@ -1,0 +1,13 @@
+@import "../../../variables";
+
+button {
+  background-color: $orange;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+:host {
+  display: block;
+}

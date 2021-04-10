@@ -1,0 +1,24 @@
+<div class="container">
+  <h4>Merkzetell</h4>
+  <hr />
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum non ex quam
+    minima explicabo maxime rerum temporibus. Vero cupiditate veniam a, sunt,
+    vitae eos alias nihil hic ut inventore earum!
+  </p>
+  <div
+    class="phone-list"
+    *ngIf="(selectedPhonesCount$ | async) > 0; else noSelected"
+  >
+    <app-phone-card
+      *ngFor="let phone of selectedPhones$ | async"
+      [phone]="phone"
+      (selectPhoneEmitter)="selectPhone(phone)"
+    ></app-phone-card>
+  </div>
+  <ng-template #noSelected>
+    <div class="no-selected">
+      You haven selected any phones <a [routerLink]="['/']">Go Back to home?</a>
+    </div>
+  </ng-template>
+</div>

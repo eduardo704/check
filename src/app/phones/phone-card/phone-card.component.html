@@ -1,0 +1,42 @@
+<div class="phone-card">
+  <div class="img-container">
+    <img
+      class="card-img"
+      [src]="phoneImgUrl + phone.image"
+      alt=""
+      height="180"
+      width="100"
+    />
+  </div>
+
+  <div class="card-body">
+    <p>stars {{ phone.rating }}</p>
+    <p>{{ phone.name }}</p>
+    <p *ngIf="phone.price_reduced === null">{{ phone.price }}</p>
+    <ng-container *ngIf="phone.price_reduced !== null">
+      <p class="old-price">{{ phone.price }}</p>
+      <p class="new-price">{{ phone.price_reduced }}</p>
+    </ng-container>
+  </div>
+  <button class="black-button" (click)="buy()">Bestellen</button>
+  <div>
+    <img
+      width="24"
+      height="24"
+      class="favorite"
+      *ngIf="!phone.selected"
+      (click)="selectPhone()"
+      src="assets/images/favorite.svg"
+      alt=""
+    />
+    <img
+      width="24"
+      height="24"
+      class="favorite"
+      *ngIf="phone.selected"
+      (click)="selectPhone()"
+      src="assets/images/favorite_filled.svg"
+      alt=""
+    />
+  </div>
+</div>
