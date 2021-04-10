@@ -14,6 +14,7 @@
       *ngFor="let phone of selectedPhones$ | async"
       [phone]="phone"
       (selectPhoneEmitter)="selectPhone(phone)"
+      (buyPhone)="showModal(phone)"
     ></app-phone-card>
   </div>
   <ng-template #noSelected>

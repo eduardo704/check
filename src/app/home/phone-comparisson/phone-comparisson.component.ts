@@ -56,7 +56,6 @@ export class PhoneComparissonComponent implements OnInit {
     this.selectPhonesOnTab();
   }
   selectPhone(item: MappedPhone) {
-    console.log(item);
     this.phoneStoreService.selectPhone(item);
   }
 

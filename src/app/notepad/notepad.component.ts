@@ -1,3 +1,4 @@
+import { ModalService } from './../common-ui/modal.service';
 import { MappedPhone } from './../home/models/model';
 import { Observable } from 'rxjs';
 import { PhoneStoreService } from './../state/phone.store.service';
@@ -12,7 +13,10 @@ export class NotepadComponent implements OnInit {
   selectedPhones$: Observable<Array<MappedPhone>>;
   selectedPhonesCount$: Observable<number>;
 
-  constructor(private phoneStoreService: PhoneStoreService) {}
+  constructor(
+    private phoneStoreService: PhoneStoreService,
+    private modalService: ModalService
+  ) {}
 
   ngOnInit(): void {
     this.selectedPhones$ = this.phoneStoreService.getSelected$;
@@ -21,5 +25,9 @@ export class NotepadComponent implements OnInit {
 
   selectPhone(item: MappedPhone) {
     this.phoneStoreService.selectPhone(item);
+  }
+
+  showModal(phone: MappedPhone) {
+    this.modalService.showModal();
   }
 }
