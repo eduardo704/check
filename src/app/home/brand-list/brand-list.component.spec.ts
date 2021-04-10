@@ -11,9 +11,8 @@ describe('BrandListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BrandListComponent ]
-    })
-    .compileComponents();
+      declarations: [BrandListComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

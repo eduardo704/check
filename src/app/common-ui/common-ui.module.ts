@@ -6,23 +6,9 @@ import { HeaderComponent } from './header/header.component';
 import { LoginModalComponent } from './login-modal/login-modal.component';
 import { FooterComponent } from './footer/footer.component';
 
-
-
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    LoginModalComponent,
-    FooterComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    SharedModule
-  ],
-  exports: [
-    HeaderComponent,
-    LoginModalComponent,
-    FooterComponent
-  ]
+  declarations: [HeaderComponent, LoginModalComponent, FooterComponent],
+  imports: [CommonModule, RouterModule, SharedModule],
+  exports: [HeaderComponent, LoginModalComponent, FooterComponent],
 })
-export class CommonUiModule { }
+export class CommonUiModule {}

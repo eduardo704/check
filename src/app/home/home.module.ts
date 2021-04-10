@@ -10,20 +10,19 @@ import { TeaserComponent } from './teaser/teaser.component';
 import { SharedModule } from '../shared/shared.module';
 import { PhoneComparissonComponent } from './phone-comparisson/phone-comparisson.component';
 
-
 @NgModule({
   declarations: [
     HomeComponent,
     TeaserComponent,
     BrandListComponent,
-    PhoneComparissonComponent
+    PhoneComparissonComponent,
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     SharedModule,
     PhonesModule,
-    CommonUiModule
-  ]
+    CommonUiModule,
+  ],
 })
-export class HomeModule { }
+export class HomeModule {}

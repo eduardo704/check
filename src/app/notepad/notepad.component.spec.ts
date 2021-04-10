@@ -8,9 +8,8 @@ describe('NotepadComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NotepadComponent ]
-    })
-    .compileComponents();
+      declarations: [NotepadComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -5,15 +5,8 @@ import { CommonModule } from '@angular/common';
 import { NotepadRoutingModule } from './notepad-routing.module';
 import { NotepadComponent } from './notepad.component';
 
-
 @NgModule({
-  declarations: [
-    NotepadComponent
-  ],
-  imports: [
-    CommonModule,
-    NotepadRoutingModule,
-    PhonesModule
-  ]
+  declarations: [NotepadComponent],
+  imports: [CommonModule, NotepadRoutingModule, PhonesModule],
 })
-export class NotepadModule { }
+export class NotepadModule {}
