@@ -17,4 +17,5 @@ export interface Phone {
 }
 export interface MappedPhone extends Phone {
   selected: boolean;
+  mappedRating: Array<any>;
 }

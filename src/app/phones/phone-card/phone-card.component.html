@@ -10,7 +10,16 @@
   </div>
 
   <div class="card-body">
-    <p>stars {{ phone.rating }}</p>
+    <div>
+      <img
+        *ngFor="let item of phone.mappedRating"
+        width="20"
+        height="20"
+        class="favorite"
+        src="assets/images/rating.svg"
+        alt=""
+      />
+    </div>
     <p>{{ phone.name }}</p>
     <p *ngIf="phone.price_reduced === null">{{ phone.price }}</p>
     <ng-container *ngIf="phone.price_reduced !== null">

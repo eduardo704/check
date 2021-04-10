@@ -17,7 +17,13 @@ export class PhonesService {
       take(1),
       map((phones) => {
         return phones.map((phone) => {
-          return { ...phone, selected: false };
+          const newRaiting = parseInt(phone.rating.toPrecision(1));
+          return {
+            ...phone,
+            selected: false,
+            rating: newRaiting,
+            mappedRating: new Array(newRaiting),
+          };
         });
       }),
       tap((phones) => {
