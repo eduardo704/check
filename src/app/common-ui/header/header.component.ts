@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { PhoneStoreService } from './../../state/phone.store.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  count$;
+  count$:Observable<number>;
   constructor(private phoneStoreService: PhoneStoreService) {}
 
   ngOnInit(): void {

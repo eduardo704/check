@@ -1,10 +1,10 @@
-import { Phone, MappedPhone } from './../home/models/model';
-import { SetPhones, SelectPhone } from './phone.action';
-import { PhoneState, PhoneStateModel } from './phone.state';
 import { Injectable } from '@angular/core';
 import { Dispatch } from '@ngxs-labs/dispatch-decorator';
 import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
+import { MappedPhone } from './../home/models/model';
+import { SelectPhone, SetPhones } from './phone.action';
+import { PhoneState, PhoneStateModel } from './phone.state';
 
 @Injectable({
   providedIn: 'root',
@@ -37,8 +37,4 @@ export class PhoneStoreService {
   public selectPhone(phone: MappedPhone) {
     return new SelectPhone(phone);
   }
-  // @Dispatch()
-  // public setIsEmail(isEmail: boolean) {
-  //   return new SetIsEmail(isEmail);
-  // }
 }

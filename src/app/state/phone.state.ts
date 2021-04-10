@@ -1,9 +1,8 @@
-import { MappedPhone } from './../home/models/model';
-import { SetPhones, SelectPhone } from './phone.action';
-import { State, Selector, StateContext, Action } from '@ngxs/store';
 import { Injectable } from '@angular/core';
-import { Phone } from '../home/models/model';
+import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { patch, updateItem } from '@ngxs/store/operators';
+import { MappedPhone } from './../home/models/model';
+import { SelectPhone, SetPhones } from './phone.action';
 export interface PhoneStateModel {
   phones: Array<MappedPhone>;
 }

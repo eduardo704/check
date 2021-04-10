@@ -1,4 +1,4 @@
-import { Phone, Tab, MappedPhone } from './../home/models/model';
+import { MappedPhone, Tab } from './../home/models/model';
 
 export class SetPhones {
   public static readonly type = '[Phone] Set phones';

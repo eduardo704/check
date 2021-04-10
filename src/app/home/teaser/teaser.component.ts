@@ -11,9 +11,4 @@ export class TeaserComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  teste(){
-    alert('test')
-  }
-
 }

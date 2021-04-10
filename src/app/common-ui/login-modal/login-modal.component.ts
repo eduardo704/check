@@ -15,9 +15,11 @@ export class LoginModalComponent implements OnInit, OnDestroy {
   constructor(private modalService: ModalService) {}
 
   ngOnInit(): void {
-    this.modalService.isModal$.pipe(takeUntil(this.destroy$)).subscribe((isModal) => {
-      this.isModal = isModal;
-    });
+    this.modalService.isModal$
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((isModal) => {
+        this.isModal = isModal;
+      });
   }
   ngOnDestroy(): void {
     this.destroy$.next(true);

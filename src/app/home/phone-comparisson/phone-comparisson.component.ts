@@ -1,9 +1,9 @@
-import { ModalService } from './../../common-ui/modal.service';
-import { Observable } from 'rxjs';
-import { PhoneStoreService } from './../../state/phone.store.service';
-import { PhonesService } from './../../phones.service';
-import { Tab, Phone, MappedPhone } from './../models/model';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ModalService } from './../../common-ui/modal.service';
+import { PhonesService } from './../../phones.service';
+import { PhoneStoreService } from './../../state/phone.store.service';
+import { MappedPhone, Tab } from './../models/model';
 
 @Component({
   selector: 'app-phone-comparisson',
@@ -37,7 +37,6 @@ export class PhoneComparissonComponent implements OnInit {
   phones: Array<MappedPhone> = [];
   phonesToShow$: Observable<Array<MappedPhone>>;
 
-
   constructor(
     private phonesService: PhonesService,
     private phoneStoreService: PhoneStoreService,
@@ -59,7 +58,7 @@ export class PhoneComparissonComponent implements OnInit {
     this.phoneStoreService.selectPhone(item);
   }
 
-  showModal(phone:MappedPhone) {
+  showModal(phone: MappedPhone) {
     this.modalService.showModal();
   }
 
